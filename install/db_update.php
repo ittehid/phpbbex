@@ -1122,9 +1122,7 @@ function _print_footer()
 		</div>
 	</div>
 
-	<div id="page-footer">
-		Powered by ' . POWERED_BY . '
-	</div>
+	<div id="page-footer">Powered by <a href="//phpbbex.com/">phpBBex</a></div>
 </div>
 
 </body>

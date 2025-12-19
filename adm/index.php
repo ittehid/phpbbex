@@ -159,7 +159,6 @@ function adm_page_footer($copyright_html = true)
 
 	$template->assign_vars([
 		'DEBUG_OUTPUT'		=> (defined('DEBUG')) ? $debug_output : '',
-		'L_POWERED_BY'		=> $copyright_html ? $user->lang('POWERED_BY', POWERED_BY) : '',
 	]);
 
 	$template->display('body');
