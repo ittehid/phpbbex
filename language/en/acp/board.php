@@ -107,7 +107,7 @@ $lang = array_merge($lang, [
 	'STYLE_MP_SHOW_LAST_ACTIVE'			=> 'Display user last active date',
 
 	'COPYRIGHT_NOTICE'					=> 'Copyrights (HTML)',
-	'COPYRIGHT_NOTICE_EXPLAIN'			=> 'Use {L_POWERED_BY} placeholder to output phpBBex copyright.',
+	'COPYRIGHT_NOTICE_EXPLAIN'			=> 'You can use language strings like {L_POWERED_BY}.',
 
 	'AUTO'								=> 'Auto',
 	'ON_LEFT'							=> 'On Left',

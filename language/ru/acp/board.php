@@ -107,7 +107,7 @@ $lang = array_merge($lang, [
 	'STYLE_MP_SHOW_LAST_ACTIVE'			=> 'Отображать дату последнего посещения',
 
 	'COPYRIGHT_NOTICE'					=> 'Авторские права (HTML)',
-	'COPYRIGHT_NOTICE_EXPLAIN'			=> 'Используйте метку {L_POWERED_BY} чтобы вставить копирайт phpBBex.',
+	'COPYRIGHT_NOTICE_EXPLAIN'			=> 'Можно использовать языковые строки вроде {L_POWERED_BY}.',
 
 	'AUTO'								=> 'Авто',
 	'ON_LEFT'							=> 'Слева',

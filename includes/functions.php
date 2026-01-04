@@ -4433,15 +4433,9 @@ function page_footer($run_cron = true)
 		}
 	}
 
-	$l_powered_by = $user->lang('POWERED_BY');
-	if (!empty($config['external_links_newwindow'])) $l_powered_by = str_replace('<a ', '<a target="_blank" ', $l_powered_by);
-	if (!empty($config['external_links_nofollow']))  $l_powered_by = str_replace('<a ', '<a rel="nofollow" ', $l_powered_by);
-
 	$template->assign_vars([
-		'DEBUG_OUTPUT'			=> (defined('DEBUG')) ? $debug_output : '',
-		'L_POWERED_BY'			=> $l_powered_by,
-		'COPYRIGHT_NOTICE'		=> nl2br(str_replace(['{L_POWERED_BY}'], [$l_powered_by], trim($config['copyright_notice']))),
-
+		'DEBUG_OUTPUT'			=> $debug_output ?? '',
+		'COPYRIGHT_NOTICE'		=> nl2br(preg_replace_callback('#{L_([_A-Z0-9]+)}#', function ($m) use ($user) { return $user->lang[$m[1]] ?? $m[0]; }, trim($config['copyright_notice']))),
 		'U_ACP' => ($auth->acl_get('a_') && !empty($user->data['is_registered'])) ? append_sid(PHPBB_ROOT_PATH . 'adm/index.php', false, true, $user->session_id) : '']
 	);
 
